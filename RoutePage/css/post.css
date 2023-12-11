@@ -1,0 +1,406 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --brand-white: #ececec;
+  --brand-black: #282828;
+  --brand-red: #ff584f;
+  --brand-green: #19a94b;
+  --brand-blue: #18315b;
+  --bland-darkblue: #091b39;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  margin-bottom: -8px;
+}
+
+
+nav a:hover {
+  color: #0cb7bb !important;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: var(--brand-black);
+}
+
+/* COR DO BODY - BLUE */
+.container {
+  background-color: #091b39;
+}
+
+.navbar {
+  --bs-navbar-padding-x: none !important;
+  --bs-gutter-x: 0rem !important;
+}
+
+.navbg2 {
+  display: relative !important;
+  flex-wrap: inherit;
+  align-items: center;
+  background-color: var(--bland-darkblue) !important;
+  justify-content: end !important;
+}
+.barra{
+  color: white;
+  padding-right: 10px;
+  }
+
+/* COR DA BARRA DE INÍCIO */
+.container .container-fluid,
+.gallery .container {
+  --bs-gutter-x: 0rem !important;
+  background-color: var(--brand-white);
+}
+.container-fluid,
+.row {
+  --bs-gutter-x: 0rem !important;
+  margin-bottom: -1px;
+}
+/* COR DA BARRA D0 RODAPÉ */
+footer .container {
+  --bs-gutter-x: 0rem !important;
+  background-color: var(--bland-darkblue);
+}
+
+/*--------------------------------------------------------------
+  # FONTE / BORDER-BUTTON
+  --------------------------------------------------------------*/
+section #home .row {
+  background-color: var(--bland-blue) !important;
+}
+.home-name-size {
+  font-size: 2.5vw;
+  font-weight: 700;
+}
+#BannerLGPD {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-around;
+  align-items: center;
+  justify-content: center;
+}
+/* Estilo para dispositivos móveis */
+@media screen and (max-width: 600px) {
+  #BannerLGPD {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+  }
+  .mobile{
+    display: none;
+  }
+}
+
+/*------------HOME RIGHT SIDE COLOR -> ------------*/
+.home-right-side {
+  position: relative;
+  /* padding: 50px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/*------------MAIN------------*/
+.main {
+  background-color: var(--brand-white);
+  font-size: 22px;
+  font-family: Geomanist;
+  font-weight: 400;
+  line-height: 40px;
+  word-wrap: break-word;
+  color: #181d2c;
+  text-align: justify;
+}
+
+/*--------------------------------------------------------------
+  # OFFCANVAS - SANDUICHE -- AJUSTAR Z-INDEX E ACOR DO TEXTO 
+  --------------------------------------------------------------*/
+header {
+  background-color: var(--brand-white);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 2 !important;
+}
+.main-nav-name {
+  padding: 5px 10px;
+  color: black !important;
+  text-decoration: none;
+  font-weight: 400;
+}
+.main-nav-name span {
+  color: var(--brand-green);
+}
+
+/*--------------------------------------------------------------
+  # ABOUT MAIN CONTAINER
+  --------------------------------------------------------------*/
+.about-main-container {
+  /* min-height: 100vh; */
+  background-color: var(--brand-white);
+  margin: auto;
+  /* padding: 30px; */
+}
+
+/*--------------------------------------------------------------
+  # RESPONSIVE
+  --------------------------------------------------------------*/
+@media (min-width: 576px) {
+  .container,
+  .container-sm {
+    max-width: 100% !important;
+  }
+}
+@media screen and (max-width: 872px) {
+  .home-name-size {
+    /* margin-top: 15vh; */
+    /* font-size: 10vw; */
+    font-weight:700;
+  }
+}
+@media screen and (max-width: 767px) {
+  .LogoFont {
+    width: 10vw;
+  }
+  .navbg2 a {
+    font-size: 1.8vh;
+  }
+  .TextFont {
+    font-size: 3vw;
+  }
+  .ImgFont {
+    width: 22vw;
+  }
+}
+@media screen and (max-width: 326px) {
+  .navbg2 a {
+    font-size: 5vw;
+  }
+  .TextFont {
+    font-size: 3vw;
+  }
+}
+
+/*--------------------------------------------------------------
+  # FOOTER DA PAGE
+  --------------------------------------------------------------*/
+.footer {
+  margin-top: 30px;
+  font-size: 14px;
+  /* border-top: 1px solid rgba(255, 255, 255, 0.15); */
+}
+.footer .copyright {
+  padding-top: 2px;
+  text-align: right;
+  font-size: 13px;
+}
+.footer .credits {
+  padding-top: 6px;
+  text-align: center;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: var(--bland-darkblue);
+}
+.footer .credits img {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+.footer .credits a {
+  color: var(--color-primary);
+}
+
+/*--------------------------------------------------------------
+  # BOTÃO DE VOLTAR AO INÍCIO
+--------------------------------------------------------------*/
+.scroll-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: -15px;
+  z-index: 99999;
+  background: var(--color-primary);
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.scroll-top i {
+  font-size: 24px;
+  color: #fff;
+  line-height: 0;
+}
+
+.scroll-top:hover {
+  background: rgba(39, 167, 118, 0.8);
+  color: #fff;
+}
+
+.scroll-top.active {
+  visibility: visible;
+  opacity: 1;
+  bottom: 15px;
+}
+
+/*--------------------------------------------------------------
+  # GALLERY AJUSTAR Z-INDEX DO HOVER 
+--------------------------------------------------------------*/
+.gallery {
+  margin-top: 40px;
+}
+
+.gallery .gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.gallery .gallery-item img {
+  transition: 0.3s;
+}
+
+.gallery .gallery-links {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: all ease-in-out 0.3s;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.gallery .gallery-links .preview-link,
+.gallery .gallery-links .details-link {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  transition: 0.3s;
+  line-height: 1.2;
+  margin: 30px 8px 0 8px;
+}
+
+.gallery .gallery-links .preview-link:hover,
+.gallery .gallery-links .details-link:hover {
+  color: #fff;
+}
+
+.gallery .gallery-links .details-link {
+  font-size: 30px;
+  line-height: 0;
+}
+
+.gallery .gallery-item:hover .gallery-links {
+  opacity: 1;
+}
+
+.gallery .gallery-item:hover .preview-link,
+.gallery .gallery-item:hover .details-link {
+  margin-top: 0;
+}
+
+.gallery .gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.glightbox-clean .gslide-description {
+  background: #222425;
+}
+
+.glightbox-clean .gslide-title {
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+/*-------------------------------------------------------------
+  # BUTÃO DE VOLTAR A TELA INÍCIAL 
+-------------------------------------------------------------*/
+button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 1.2em;
+  padding: 0.7em 1.4em;
+  background-color: #BF0426;
+  text-decoration: none;
+  border: none;
+  border-radius: 0.5em;
+  color: #DEDEDE;
+  box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-around;
+  align-items: center;
+  justify-content: center;
+}
+
+button::before {
+  position: absolute;
+  content: '';
+  height: 0;
+  width: 0;
+  top: 0;
+  left: 0;
+  background: linear-gradient(135deg, rgba(33,33,33,1) 0%, rgba(33,33,33,1) 50%, rgba(150,4,31,1) 50%, rgba(191,4,38,1) 60%);
+  border-radius: 0 0 0.5em 0;
+  box-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+
+button:hover::before {
+  width: 1.6em;
+  height: 1.6em;
+}
+
+button:active {
+  box-shadow: 0.2em 0.2em 0.3em rgba(0, 0, 0, 0.3);
+  transform: translate(0.1em, 0.1em);
+}
+
+/* Estilo para dispositivos móveis */
+@media screen and (max-width: 600px) {
+  button {
+    top: 10px;
+    left: 10px;
+    font-size: 12px;
+    padding: 0.5em 1em;
+  }
+}
+
+
+
+
+
+
+
+
+/* Estilos para dispositivos móveis */
+@media screen and (max-width: 767px) {
+  .about-main-container {
+    padding: 10px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+    .col-md-6,
+    .col-md-3 {
+      width: 40%;
+      /* Adicione estilos específicos para dispositivos móveis aqui */
+      font-size: 14px; 
+      line-height: 2; 
+    }
+  }
